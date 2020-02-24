@@ -14,7 +14,7 @@ class MoviesRepo {
         return APIClient.shared.retrofit.create(MoviesService::class.java)
             .getMovies(page)
             .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
+            .observeOn(Schedulers.single())
             .map { Movies(it.results, it.page, null) }
     }
 }
