@@ -41,13 +41,16 @@ class MainActivity: BaseActivity<MoviesViewModel>() {
             if (it.error != null) {
                 showAlert(it.error!!)
             } else if (it.movies != null) {
-                this.movies.clear()
-                this.movies.addAll(it.movies!!)
-                adapter.notifyDataSetChanged()
+                updateMovies(it.movies!!)
                 showAlert("Done 💪")
-
             }
         })
+    }
+
+    private fun updateMovies(newMovies: List<Movie>) {
+        movies.clear()
+        movies.addAll(newMovies)
+        adapter.notifyDataSetChanged()
     }
 }
 
