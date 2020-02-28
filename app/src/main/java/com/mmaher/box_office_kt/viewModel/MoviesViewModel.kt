@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mmaher.basemodule.viewModel.BaseViewModel
-import com.mmaher.box_office_kt.model.Movie
 import com.mmaher.box_office_kt.model.repo.MoviesRepo
 import com.mmaher.box_office_kt.model.viewModel.Movies
 

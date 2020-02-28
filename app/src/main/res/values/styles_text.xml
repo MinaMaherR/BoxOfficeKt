@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextTitle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextSubtitle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">@dimen/text_subtitle</item>
+        <item name="android:textColor">@color/textSubtitle</item>
+    </style>
+
+    <style name="TextSecondary" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">@dimen/text_secondary</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+</resources>

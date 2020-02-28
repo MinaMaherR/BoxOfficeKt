@@ -24,6 +24,7 @@ ext {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
         maven { url "https://oss.jfrog.org/libs-snapshot" }

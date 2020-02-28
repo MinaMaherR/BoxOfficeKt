@@ -3,7 +3,6 @@ package com.mmaher.box_office_kt.model.repo
 import com.mmaher.basemodule.model.repo.APIClient
 import com.mmaher.box_office_kt.model.viewModel.Movies
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 /**

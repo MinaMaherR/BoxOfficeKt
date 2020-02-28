@@ -1,13 +1,13 @@
-package com.mmaher.box_office_kt
+package com.mmaher.box_office_kt.view.activity
 
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mmaher.basemodule.view.BaseActivity
 import com.mmaher.basemodule.view.adapter.BaseAdapter
+import com.mmaher.box_office_kt.R
 import com.mmaher.box_office_kt.model.Movie
+import com.mmaher.box_office_kt.view.adapter.MoviesAdapter
 import com.mmaher.box_office_kt.viewModel.MoviesViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -24,12 +24,7 @@ class MainActivity: BaseActivity<MoviesViewModel>() {
     }
 
     private fun initViews() {
-        adapter = BaseAdapter(movies, android.R.layout.simple_list_item_1, object: BaseAdapter.Binder<Movie>() {
-            override fun bind(item: Movie, itemView: View) {
-                itemView.findViewById<TextView>(android.R.id.text1).text = item.title
-            }
-        })
-
+        adapter = MoviesAdapter(movies, R.layout.item_movie)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }
